@@ -10,16 +10,16 @@ const Nav = () => {
 
     return (
         <>
-            <nav className='w-full flex flex-row justify-between items-center'>
-                <section className="mx-16">
+            <nav className='w-full flex flex-row justify-between items-center p-10'>
+                <section className="flex justify-center w-2/6">
                     <Link to="/">
                         search
                     </Link>
                 </section>
                 
-                <span className="text-center shadow-inner shadow-sm font-semibold tracking-widest rounded w-80 p-2 cursor-pointer">{import.meta.env.VITE_APP_NAME}</span>
+                <span className="m-2 w-2/6 text-center shadow-inner shadow-sm font-semibold tracking-widest rounded p-2 cursor-pointer">{import.meta.env.VITE_APP_NAME}</span>
                 
-                <section className='flex justify-around '>
+                <section className='flex justify-center w-2/6'>
                     <Button
                         variant="outline-dark"
                         onClick={() => setLoginModalShow(true)}

@@ -1,27 +1,26 @@
 import { Outlet } from 'react-router-dom'
 import Nav from './Nav'
+import MangaList from './MangaList';
 
 const GuestLayout = () => {
-
     return (
-        <div className='p-8 w-full h-full'>
+        <div className='w-full h-screen'>
             {/* Header */}
             <section>
                 <Nav />
             </section>
 
             {/* Body */}
-            <section className='h-96 pt-16'>
-                <div className='flex flex-wrap'>
+            <section>
+                <div className='flex flex-wrap justify-center'>
+                    <MangaList />
                 </div>
                 <Outlet />
             </section>
 
             {/* Footer */}
-            <section className='flex justify-end w-full'>
-                <div className='flex flex-col justify-end'>
-
-                </div>
+            <section className='h-24 bg-black'>
+                This is Footer
             </section>
         </div>
     )
