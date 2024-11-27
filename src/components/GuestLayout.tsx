@@ -4,7 +4,7 @@ import MangaList from './MangaList';
 
 const GuestLayout = () => {
     return (
-        <div className='w-full h-screen'>
+        <div>
             {/* Header */}
             <section>
                 <Nav />
@@ -19,7 +19,7 @@ const GuestLayout = () => {
             </section>
 
             {/* Footer */}
-            <section className='h-24 bg-black'>
+            <section className=''>
                 This is Footer
             </section>
         </div>

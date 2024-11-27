@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import LoginModal from './modals/LoginModal';
 import RegisterModal from './modals/RegisterModal';
+import Button from './Button';
+import { BsSearch } from 'react-icons/bs';
 
 const Nav = () => {
     const [loginModalShow, setLoginModalShow] = useState(false);
@@ -10,28 +11,20 @@ const Nav = () => {
 
     return (
         <>
-            <nav className='w-full flex flex-row justify-between items-center p-10'>
-                <section className="flex justify-center w-2/6">
-                    <Link to="/">
-                        search
-                    </Link>
+            <nav className='w-full flex flex-row justify-between items-center pb-10 px-12'>
+                <span className="text-indigo-300 text-3xl font-mono m-2 w-2/6 font-semibold cursor-pointer">{import.meta.env.VITE_APP_NAME}</span>
+
+                <section className="flex justify-center w-2/6 cursor-pointer">
+                    <span className='flex items-center font-mono text-gray-400 text-xl pb-2'>
+                        <BsSearch className=''/>
+                        <input className='bg-transparent ml-4 outline-none' placeholder="Search Manga..."/> 
+                    </span>
                 </section>
                 
-                <span className="m-2 w-2/6 text-center shadow-inner shadow-sm font-semibold tracking-widest rounded p-2 cursor-pointer">{import.meta.env.VITE_APP_NAME}</span>
                 
-                <section className='flex justify-center w-2/6'>
-                    <Button
-                        variant="outline-dark"
-                        onClick={() => setLoginModalShow(true)}
-                        className="shadow-inner shadow-md font-medium tracking-widest px-4 mr-4">
-                        Login In
-                    </Button>
-                    <Button 
-                        variant="outline-dark"
-                        onClick={() => setRegisterModalShow(true)}
-                        className="shadow-inner shadow-md font-medium tracking-widest px-4">
-                        Register
-                    </Button>
+                <section className='flex justify-end w-2/6 '>
+                    <Button onClick={() => setLoginModalShow(true)} text_name='Login In'/>
+                    <Button onClick={() => setRegisterModalShow(true)} text_name='Register'/>
                 </section>
             </nav>
             <section>
