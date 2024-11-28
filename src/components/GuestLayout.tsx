@@ -1,8 +1,10 @@
 import { Outlet } from 'react-router-dom'
 import Nav from './Nav'
 import MangaList from './MangaList';
+import Cover from './Cover';
 
 const GuestLayout = () => {
+    
     return (
         <div>
             {/* Header */}
@@ -12,9 +14,8 @@ const GuestLayout = () => {
 
             {/* Body */}
             <section>
-                <div className='flex flex-wrap justify-center'>
-                    <MangaList />
-                </div>
+                <Cover />
+                <MangaList />
                 <Outlet />
             </section>
 

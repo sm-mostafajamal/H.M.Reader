@@ -1,34 +1,33 @@
 import { useQuery } from '@tanstack/react-query'
 import { fetchMangaList } from '../services/get_all_data';
 import Loading from './Loading';
+import { state } from '../utilities/MangaFilters';
+import { TFetchedMangaList } from '../utilities/Types';
 
 const MangaList = () => {
-    const {isSuccess, isError, isLoading, data} = useQuery({ 
+    const { isLoading, data } : TFetchedMangaList = useQuery({ 
         queryKey: ['mangas'], 
-        queryFn: fetchMangaList,
+        queryFn: () => fetchMangaList({state : state.ongoing.id}),
         refetchOnWindowFocus: false 
     })
 
-  return (
-    <>
-        {
-            isLoading ? 
-            Array.from(Array(24), (_, i) => <Loading key={i}/>) 
-            :
-            data['mangaList'].map((item, i) => {
-                return (
-                    <div key={i}
-                        className="border border-blue-300 shadow rounded-md max-w-sm w-40 h-50 mx-2">
-                        <div className="flex">
-                            <div className="flex-1"> 
-                                <img src={`${item.image}`} />
+    return (
+        <div className='flex flex-wrap justify-center mt-4'>
+            {
+                isLoading ? 
+                Array.from(Array(24), (_, i) => <Loading key={i}/>) 
+                :
+                data?.mangaList?.map((item : {image:string}, i: number) => {
+                    return (
+                        <div key={i} className="mx-2 cursor-pointer mb-4">
+                            <div className="flex"> 
+                                <img src={`${item.image}`} className='max-w-sm w-40 h-60 rounded-md'/>
                             </div>
                         </div>
-                    </div>
-                )
-            })
-        }
-    </>
+                    )
+                })
+            }
+        </div>
   )
 }
 

@@ -1,7 +1,7 @@
 
 const Loading = () => {
     return (
-        <div className="border border-blue-300 shadow rounded-md p-4 max-w-sm w-40 h-50 mx-2 opacity-50">
+        <div className="border border-blue-300/25 shadow rounded-md p-4 max-w-sm w-40 h-50 mx-2 opacity-50 mb-2">
             <div className="animate-pulse flex space-x-4">
                 <div className="flex-1 space-y-6 py-1 opacity-50">
                     <div className="h-2 bg-slate-700 rounded"></div>

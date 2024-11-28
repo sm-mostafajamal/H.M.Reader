@@ -1,6 +1,6 @@
-import { MouseEventHandler } from "react"
+import { TButtonProps } from "../utilities/Types"
 
-const Button = ({onClick, text_name} : {onClick : MouseEventHandler<HTMLInputElement>, text_name : string}) => {
+const Button = ({onClick, text_name} : TButtonProps) => {
   return (
     <input
         type='button' 

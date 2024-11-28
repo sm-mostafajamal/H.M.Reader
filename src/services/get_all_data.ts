@@ -1,15 +1,17 @@
-import axios, { AxiosError, AxiosResponse } from "axios";
+import axios, { AxiosResponse } from "axios";
+import { TParams, TResponse } from "../utilities/Types";
 
-export const fetchMangaList = async () : Promise<AxiosResponse<object> | AxiosError>=> {
-    const {data} = await axios({
-        methos: 'get',
+
+export const fetchMangaList = async (params: TParams) : Promise<AxiosResponse<TResponse>> => {
+    const {data} = await axios.request({
+        method: 'get',
         url: '/api/mangaList',
         headers: {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Headers": "Content-Type"
         },
         baseURL: import.meta.env.VITE_APP_URL,
-        crossDomain: true,
+        params: params 
     });
 
     return data

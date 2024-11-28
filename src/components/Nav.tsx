@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom';
 import LoginModal from './modals/LoginModal';
 import RegisterModal from './modals/RegisterModal';
 import Button from './Button';
@@ -11,7 +10,7 @@ const Nav = () => {
 
     return (
         <>
-            <nav className='w-full flex flex-row justify-between items-center pb-10 px-12'>
+            <nav className='w-full flex flex-row justify-between items-center px-12'>
                 <span className="text-indigo-300 text-3xl font-mono m-2 w-2/6 font-semibold cursor-pointer">{import.meta.env.VITE_APP_NAME}</span>
 
                 <section className="flex justify-center w-2/6 cursor-pointer">
