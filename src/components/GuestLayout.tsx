@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom'
 import Nav from './Nav'
 import MangaList from './MangaList';
 import Cover from './Cover';
+import Filter from './Filter';
 
 const GuestLayout = () => {
     
@@ -13,9 +14,16 @@ const GuestLayout = () => {
             </section>
 
             {/* Body */}
-            <section>
+            <section className='my-10'>
                 <Cover />
-                <MangaList />
+                <div className='flex'>
+                    <section className='w-5/6'>
+                        <MangaList />
+                    </section>
+                    <aside className='w-1/6'>
+                        <Filter />
+                    </aside>
+                </div>
                 <Outlet />
             </section>
 

@@ -8,10 +8,11 @@ export const fetchMangaList = async (params: TParams) : Promise<AxiosResponse<TR
         url: '/api/mangaList',
         headers: {
             "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Headers": "Content-Type"
+            "Access-Control-Allow-Headers": "Content-Type",
+            'Content-Type': 'application/json'
         },
         baseURL: import.meta.env.VITE_APP_URL,
-        params: params 
+        params: params
     });
 
     return data

@@ -17,11 +17,11 @@ function Cover() {
         <>
             {
             isSuccess &&
-            <Carousel slide touch indicators={false} className='my-10'>
+            <Carousel  touch indicators={false} className='min-h-96 flex items-center'>
                 {
                     data?.mangaList?.map((manga : TMangaItem, i: number) => { 
                         return (
-                            <Carousel.Item  interval={3000} key={i}>
+                            <Carousel.Item key={i}>
                                 <CoverItem manga={manga} />
                             </Carousel.Item>
                         )

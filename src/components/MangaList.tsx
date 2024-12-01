@@ -7,7 +7,7 @@ import { TFetchedMangaList } from '../utilities/Types';
 const MangaList = () => {
     const { isLoading, data } : TFetchedMangaList = useQuery({ 
         queryKey: ['mangas'], 
-        queryFn: () => fetchMangaList({state : state.ongoing.id}),
+        queryFn: () => fetchMangaList({state : state.all.id}),
         refetchOnWindowFocus: false 
     })
 
