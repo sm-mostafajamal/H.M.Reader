@@ -3,6 +3,8 @@ import Nav from './Nav'
 import MangaList from './MangaList';
 import Cover from './Cover';
 import Filter from './Filter';
+import MangaStates from './MangaStates';
+import Footer from './Footer';
 
 const GuestLayout = () => {
     
@@ -16,7 +18,7 @@ const GuestLayout = () => {
             {/* Body */}
             <section className='my-10'>
                 <Cover />
-                <div className='flex'>
+                <div className='flex my-20'>
                     <section className='w-5/6'>
                         <MangaList />
                     </section>
@@ -24,13 +26,12 @@ const GuestLayout = () => {
                         <Filter />
                     </aside>
                 </div>
+                <MangaStates />
                 <Outlet />
             </section>
 
             {/* Footer */}
-            <section className=''>
-                This is Footer
-            </section>
+            <Footer />
         </div>
     )
 }

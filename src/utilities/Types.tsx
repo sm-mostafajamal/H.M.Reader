@@ -39,3 +39,8 @@ export type TFetchedMangaList = {
     isSuccess : boolean, 
     data: TResponse | undefined
 }
+
+export type TMangaFilter = {
+    id : string,
+    title : string
+}

@@ -1,7 +1,7 @@
 export const category = {
     all : { id: "all", name: "ALL" },
     Action : { id: "Action", name: "Action" },
-    Adult : { id: "Adult", name: "Adult" },
+    // Adult : { id: "Adult", name: "Adult" },
     Adventure : { id: "Adventure", name: "Adventure" },
     Comedy : { id: "Comedy", name: "Comedy" },
     Cooking : { id: "Cooking", name: "Cooking" },
@@ -24,7 +24,7 @@ export const category = {
     Medical : { id: "Medical", name: "Medical" },
     Mystery : { id: "Mystery", name: "Mystery" },
     One  : { id: "One shot", name: "One shot"},
-    Pornographic : { id: "Pornographic", name: "Pornographic" },
+    // Pornographic : { id: "Pornographic", name: "Pornographic" },
     Psychological : { id: "Psychological", name: "Psychological" },
     Romance : { id: "Romance", name: "Romance" },
     School  : { id: "School life", name: "School life"},
@@ -47,9 +47,7 @@ export const category = {
 export const state = {
     all : { id: "all", name: "ALL" },
     completed : { id: "Completed", name: "Completed" },
-    ongoing : { id: "Ongoing", name: "Ongoing" },
-    drop : { id: "drop", name: "Dropped" },
-    unknown : { id: "unknown", name: "Unknown" }
+    ongoing : { id: "Ongoing", name: "Ongoing" }
 }
 
 export const type = {
